@@ -1,0 +1,42 @@
+     package javaapplication1;
+        
+   
+     import java.awt.Color;
+     import java.awt.Font;
+     import java.awt.Toolkit;
+     import java.awt.event.MouseAdapter;
+     import java.awt.event.MouseEvent;   
+     import java.io.IOException;
+     import javax.swing.JFrame;
+     import javax.swing.JLabel;
+     
+     public class JavaApplication1 {
+        
+     public static void main(String[] args)  throws IOException { 
+     
+       JFrame f = new JFrame("Pencere"); // Bir JFrame nesnesi tanımlanarak ve "Pencere" adı verildi. 
+       
+       JLabel jl = new JLabel(" Çift tıklandığında pencere kapanır.");
+       jl.setForeground(Color.RED);
+       jl.setFont(new Font ("", Font.BOLD,50));
+       f.add(jl);
+       
+       jl.addMouseListener(new MouseAdapter(){  // Mouse kontrolü için oluşturulan nesne. 
+           @Override
+           public void mouseClicked(MouseEvent e){
+               if(e.getClickCount ()> 1)
+                   System.exit(0);
+           }
+       });
+       
+    
+     
+       
+       f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); // Pencerenin kapatılırken ne yapacağını belirtir.Bu haliyle pencere kapatılabilir durumdadır.
+       f.setSize(Toolkit.getDefaultToolkit().getScreenSize()); // Bu metod pencere boyutunu belirler, bu durumda ilk açıldığında ekranı kaplayacaktır.
+       f.setLocation(0,0); // Pencerenin açılacak olan koordinatlarını belirler. Bu haliyle sol üst köşeye yatırılmış olacaktır.
+       f.setVisible(true); // Bu metodu çağırdığımızda pencere görünür olur, eğer arka tarafta ise ön tarafa getirilir.
+       f.setResizable(true); // Bu metodla pencere boyutu fare ile küçültülebilir.
+       
+           }
+        }
