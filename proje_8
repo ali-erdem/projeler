@@ -1,0 +1,24 @@
+     package javaapplication1;
+        
+     import java.util.Scanner;
+        
+        
+     public class JavaApplication1 {
+        
+     public static void main(String[] args)   { 
+     
+     Scanner scanner = new Scanner(System.in);
+      
+      System.out.print("Kilonuzu giriniz: ");
+      int kilo = scanner.nextInt();
+      
+      System.out.print("Boyunuzu giriniz (Örnek: 1,55) :  ");
+      double boy = scanner.nextDouble();
+      
+      double bki = kilo / (boy*boy);
+      
+      System.out.println("Beden Kitle Indeksiniz: " +bki);  
+      
+        }
+      
+      }
