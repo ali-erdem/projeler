@@ -1,0 +1,32 @@
+     package javaapplication1;
+        
+     import java.util.Scanner;
+        
+        
+     public class JavaApplication1 {
+        
+     public static void main(String[] args)   {   
+     
+     
+     int [] ilkdizimiz;
+     int diziuzunlugu;
+     
+     Scanner scanner = new Scanner(System.in);
+     System.out.println("Dizinin eleman sayisini giriniz: ");
+     diziuzunlugu = scanner.nextInt();
+    
+    
+     
+     ilkdizimiz = new int[diziuzunlugu];
+     
+     for(int i=0;i<diziuzunlugu;i++){
+         
+         System.out.println("Dizinin " +(i+1) + ".elemanini giriniz:");
+         ilkdizimiz[i] = scanner.nextInt();
+        }
+     
+     for(int i=0;i<diziuzunlugu;i++)
+     {
+        System.out.println("Dizinin " +(i+1) + ".elemani = " +ilkdizimiz[i]); 
+
+    }
