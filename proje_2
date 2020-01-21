@@ -1,0 +1,18 @@
+        package javaapplication1;
+        
+        public class JavaApplication1 {
+        
+        public static void main(String[] args) throws IOException  {
+        
+        InputStreamReader isr = new InputStreamReader(System.in);
+        BufferedReader br = new BufferedReader(isr);
+        
+        System.out.println("Bir tam sayi giriniz: ");           
+        String sayi = br.readLine();
+        
+        int sayim = Integer.parseInt(sayi);
+        sayim = sayim + 5;
+        System.out.println("Girilen tam sayinin beş değer fazlası = " +sayim); 
+          
+         }
+        }
