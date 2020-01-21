@@ -1,0 +1,20 @@
+         package javaapplication1;
+
+        public class JavaApplication1 {
+        
+        public static void main(String[] args) throws IOException  {
+        
+        InputStreamReader isr = new InputStreamReader(System.in);
+        BufferedReader br = new BufferedReader(isr);
+        
+        System.out.println("Bir tam sayi giriniz: ");
+        String s = br.readLine();
+        int sayi = Integer.parseInt(s);
+        
+        if(sayi %2 == 0)
+            System.out.println("Sayi çifttir.");
+        else
+            System.out.println("Sayi tektir.");
+            
+           }
+        }
