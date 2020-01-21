@@ -1,0 +1,16 @@
+        package javaapplication1;
+        
+        public class JavaApplication1 {
+        
+        public static void main(String[] args) throws IOException  {
+        
+        InputStreamReader isr = new InputStreamReader(System.in);
+        BufferedReader br = new BufferedReader(isr);
+        
+        System.out.println("Bir sayi giriniz: ");
+        String sayi = br.readLine();
+        
+        System.out.println("Girilen sayi = " +sayi); 
+          
+         }
+        }
