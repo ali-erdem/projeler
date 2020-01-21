@@ -1,0 +1,34 @@
+        package javaapplication1;
+
+        public class JavaApplication1 {
+        
+        public static void main(String[] args) throws IOException  { 
+        
+        
+        InputStreamReader isr = new InputStreamReader(System.in);
+        BufferedReader br = new BufferedReader(isr);
+        
+        int sayi1, sayi2, sayi3;
+        
+        System.out.println("Birinci tam sayiyi giriniz: ");
+        String s = br.readLine();
+        sayi1 = Integer.parseInt(s);
+        
+        System.out.println("Ikinci tam sayiyi giriniz: ");
+        s = br.readLine();
+        sayi2 = Integer.parseInt(s);
+        
+        System.out.println("Ucuncu tam sayiyi giriniz: ");
+        s = br.readLine();
+        sayi3 = Integer.parseInt(s);
+      
+        if(sayi1 >= sayi2 && sayi1 >= sayi3)
+            System.out.println("En buyuk sayi = " +sayi1);
+        else
+            if(sayi2 >= sayi1 && sayi2 >= sayi3)
+                System.out.println("En buyuk sayi = " +sayi2);
+        else
+                System.out.println("En buyuk sayi = " +sayi3);
+                
+          }
+      }
